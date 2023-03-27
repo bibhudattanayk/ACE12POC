@@ -20,6 +20,8 @@ CREATE COMPUTE MODULE TEST_MF_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot = InputRoot;
+		DECLARE Num1, Num2 INTEGER;
+		SET Num1 = 51; SET Num2 = 20;
+		SET OutputRoot.Response.Message.Sum = Num1+Num2;
 	END;
 END MODULE;
